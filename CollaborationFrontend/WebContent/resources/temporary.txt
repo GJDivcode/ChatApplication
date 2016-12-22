@@ -1,0 +1,50 @@
+		/*
+		 * temporary
+		 * */
+		// use for creating a administrator user
+
+		UserProfile profile = new UserProfile();
+		
+		profile.setFirstName("Ankit");
+		profile.setLastName("Panchal");
+		profile.setRegisterPassword("admin");
+		profile.setContactNumber("9016993941");
+		profile.setEmailAddress("Ankit.Panchal@niit.com");
+		profile.setNickname("ankit");						
+		this.userService.add(profile);
+		
+
+		/*
+		 * Code to create a new category for testing purpose 
+		 * 
+		 * */
+		
+		Category category = new Category();
+		category.setName("Angular JS");		
+		category.setDescription("To solve the angular js issues!");
+		
+		this.categoryService.add(category);
+
+		category = new Category();
+		category.setName("jQuery");
+		category.setDescription("To solve the jQuery!");
+		this.categoryService.add(category);
+
+
+		/*
+		 * code to add a dummy forum for testing 
+		 * */
+		
+		Forum forum = new Forum();
+		forum.setTitle("Angular JS for beginners!");
+		forum.setDescription("This forum will try to solve all the basics errors regarding angular js!");
+		forum.setCreatedAt(new Date());
+		forum.setModifiedAt(new Date());
+		forum.setCategoryId("CTG5E1230A90D1D");		
+		this.forumService.add(forum);
+
+
+
+
+
+

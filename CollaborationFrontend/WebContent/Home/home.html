@@ -1,0 +1,78 @@
+
+<!-- <div ng-controller="UserController as ctrl">
+
+	<div ng-hide="currentUser=='">
+		<div class="nav navbar-nav navbar-center">You logged in as:{{
+			currentUser.role}}</div>
+
+		<div class="nav navbar-nav navbar-right">
+			<a href="#" ng-click="ctrl.myProfile()">My Profile</a>
+		</div>
+		<div class="nav navbar-nav navbar-left">
+			Welcome:{{currentUser.name}}|<a href="#" ng-click="ctrl.logout()">logout</a>
+		</div>
+		
+		<hr color="blue" width="100%">
+		<div ng-show="currentUser.role=='admin">
+			<div ng-include="Admin/admin_menu.html"></div>
+		</div>
+
+		<div ng-include="'Home/home.html'"></div>
+
+
+	</div>
+
+	<div ng-show="currentUser=='" calss="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3 class="bg-primary">jobs</h3>
+				<p>You can view and Apply jobs</p>
+				<p>you can apply for a particular job after login</p>
+			</div>
+			<div class="col-sm-4">
+				<h3 class="bg-primary">Blogs</h3>
+				<p>You can view the blogs after login</p>
+				<p>if you want to write the blog you need to login</p>
+			</div>
+
+			<div class="col-sm-4">
+				<h3 class="bg-primary">Alumini/student</h3>
+				<p class="bg-info">This site is main for Alumini and Students of
+					this organization</p>
+
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+
+
+
+</div> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<script src="resources/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+	<div ng-controller="HomeController as ctrl">
+		<div ng-show="currentUser.userid!==undefined">
+			<div class="nav navbar-nav navbar-left">Welcome User
+				{{currentUser.name}} - {{currentUser.userid}}</div>
+			<div class="nav navbar-nav navbar-right">You Logged in as :
+				{{currentUser.currentrole}}</div>
+		</div>
+	</div>
+</body>
+</html>

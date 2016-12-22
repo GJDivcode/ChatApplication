@@ -1,0 +1,18 @@
+<div ng-controller="FriendController as ctrl">
+
+	<div ng-repeat="friend in ctrl.friends">
+
+		<div ng-show="friend.isOnline=='Y'">
+		<span class="glyphicon glyphicon-user" style="color:green"></span>
+		{{friend.friendID}}
+		</div>
+		
+		<div ng-show="friend.isOnline=='N'">
+		<span class="glyphicon glyphicon-user" style="color:gray"></span>
+		{{friend.friendID}}
+		</div>
+
+	</div>
+
+
+</div>

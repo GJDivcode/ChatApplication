@@ -1,0 +1,27 @@
+<div>
+	<p>
+	<p>
+	<p>
+	<p>
+	<div ng-controller="ChatForumController" class="container">
+		<p>
+		<p>
+		<p>
+		<p>
+		<form ng-submit="addMessage()" name="messageForm">
+			<input type="text" placeholder="Compose a new Message..."
+				ng-model="message">
+			<div class="info">
+				<span calss="count" ng-bind="max-message.msg.length"></span>
+				<button
+					ng-disabled="message.msg.length > max || message.msg.length <min "></button>
+
+			</div>
+		</form>
+		<hr />
+		<p ng-repeat="message in messages| orderyBy:'time':true">
+			<time>{{message.time|date:'HH:mm'}}</time>
+			<span>{{message.name}} Says:{{message.msg}}</span>
+		</p>
+	</div>
+</div>

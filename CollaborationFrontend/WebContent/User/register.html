@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="myApp">
+			<div class="formcontainer" ng-controller="UserController as ctrl" style="top: 30%;">
+				<form class="form-horizontal" name="myForm" role="form"
+					ng-submit="ctrl.submit()">
+					<div class="form-group"
+						ng-class="{'has-error': form.userid.$dirty && form.userid.$error.required}">
+						<label for="userid" class="col-sm-3 control-label"
+							style="text-align: right;">UserID:</label>
+						<div class="col-sm-6">
+							<input type="text" name="userid" id="userid" class="form-control"
+								placeholder="UserID" ng-model="ctrl.user.userid" required /> <span
+								ng-show="form.userid.$dirty && form.userid.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': form.name.$dirty && form.name.$error.required}">
+						<label for="name" class="col-sm-3 control-label"
+							style="text-align: right;">Name:</label>
+						<div class="col-sm-6">
+							<input type="text" name="name" id="name" class="form-control"
+								ng-model="ctrl.user.name" required placeholder="Middle name" />
+							<span ng-show="form.name.$dirty && form.name.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': form.address.$dirty && form.address.$error.required}">
+						<label for="address" class="col-sm-3 control-label"
+							style="text-align: right;">Address:</label>
+						<div class="col-sm-6">
+							<input type="text" name="address" id="address"
+								class="form-control" ng-model="ctrl.user.address" required
+								placeholder="Last name" /> <span
+								ng-show="form.address.$dirty && form.address.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': form.city.$dirty && form.city.$error.required}">
+						<label for="city" class="col-sm-3 control-label"
+							style="text-align: right;">City/Town:</label>
+						<div class="col-sm-6">
+							<input type="text" name="city" id="city" class="form-control"
+								ng-model="ctrl.user.city" required placeholder="City/Town" /> <span
+								ng-show="form.city.$dirty && form.city.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': form.mobile.$dirty && form.mobile.$error.required}">
+						<label for="mobile" class="col-sm-3 control-label"
+							style="text-align: right;">mobileno :</label>
+						<div class="col-sm-6">
+							<input type="text" name="mobile" id="mobile" class="form-control"
+								ng-model="ctrl.user.mobile" required placeholder="mobile number" />
+							<span ng-show="form.mobile.$dirty && form.mobile.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+
+
+					<div class="form-group"
+						ng-class="{'has-error': form.email.$dirty && form.email.$error.required}">
+						<label for="email" class="col-sm-3 control-label"
+							style="text-align: right;">User name:</label>
+						<div class="col-sm-6">
+							<input type="email" name="email" id="email" value=""
+								class="form-control" ng-model="ctrl.user.email" required
+								placeholder="Email ID" /> <span
+								ng-show="form.email.$dirty && form.email.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': form.password.$dirty && form.password.$error.required}">
+						<label for="password" class="col-sm-3 control-label"
+							style="text-align: right;">Password:</label>
+						<div class="col-sm-6">
+							<input type="password" name="password" id="password"
+								class="form-control" ng-model="ctrl.user.password" required
+								placeholder="Password" /> <span
+								ng-show="form.password.$dirty && form.password.$error.required"
+								class="help-block"></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<button type="submit"
+								ng-disabled="form$invalid || ctrl.dataLoading"
+								class="btn btn-info">Create me?</button>
+							<button type="reset" class="btn btn-danger"
+								ng-click="ctrl.reset()">Clear</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		
+	
+
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<table>
+<tr><td>Username</td><td><input type="text" ng-model="user.username"></td></tr>
+<tr><td>password</td><td><input type="password" ng-model="user.password"></td></tr>
+<tr><td>email</td><td><input type="text" ng-model="user.email"></td></tr>
+
+
+
+<tr><td>Select role</td><td>
+<input type="radio" ng-model="user.role" value="STUDENT">Student
+<input type="radio" ng-model="user.role" value="ALUMNI">Alumni
+<input type="radio" ng-model="user.role" value="EMPLOYEE">Employee</td>
+</tr>
+
+<tr><td><input type="submit" ng-click="registerUser()" value="Register"></td></tr>
+
+
+</table>
+
+</form>
+{{errorMessage}}
+</body>
+</html> -->
